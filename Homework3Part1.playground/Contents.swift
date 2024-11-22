@@ -17,7 +17,7 @@ import Foundation
  */
 
 // Псевдонім для зберігання деталей товару
-typealias ProductInfo = (String, Double, String, String, String)
+typealias ProductInfo = (productName: String, price: Double, currency: String, socet: String, processor: String)
 
 // Користувач в інтернет-магазині додав наступні товари у кошик,
 // але ще не визначився, яку саме відеократу придбати:
@@ -55,8 +55,12 @@ let cart: [ProductInfo] = [
     ------------------------------------------------------
  */
 
-
-
+for (index, product) in cart.enumerated() {
+    print("--------------------------\(index + 1)--------------------------")
+    print("Product name: \(product.productName), Price: \(product.price) \(product.currency)")
+    print("Socet: \(product.socet), Processor: \(product.processor)")
+    print("------------------------------------------------------")
+}
 
 
 /*
