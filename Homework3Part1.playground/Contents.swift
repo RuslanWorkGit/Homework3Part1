@@ -135,6 +135,13 @@ while indexPart3 < cart.count {
     ------------------------------------------------------
  */
 
+var indexPart4 = 0
+repeat {
+    print("------------------- \(indexPart4 + 1) -------------------")
+    print("Product name: \(cart[indexPart4].productName)")
+    print("Socet: \(cart[indexPart4].socet)")
+    indexPart4 += 1
+} while indexPart4 < cart.count
 
 
 
