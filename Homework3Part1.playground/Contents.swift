@@ -175,7 +175,13 @@ repeat {
     ------------------------------------------------------
  */
 
-
+for (index, product) in cart.enumerated() {
+    if product.price < 5000.0 && product.socet == "s1151" {
+        print("------------------- \(index + 1) ------------------")
+        print("Product name: \(product.productName), price: \(product.price)")
+        print("Socet: \(product.socet)")
+    } 
+}
 
 
 
