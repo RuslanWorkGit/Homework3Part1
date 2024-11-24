@@ -80,6 +80,7 @@ for (index, product) in cart.enumerated() {
     ------------------------------------------------------
  */
 
+
 var index = 1
 for product in cart {
     print("------------------- \(index) -------------------")
@@ -107,7 +108,13 @@ for product in cart {
     ------------------------------------------------------
  */
 
-
+var indexPart3 = 0
+while indexPart3 < cart.count {
+    print("------------------- \(indexPart3 + 1) -------------------")
+    print("Product name: \(cart[indexPart3].productName)")
+    print("Price: \(cart[indexPart3].price)")
+    indexPart3 += 1
+}
 
 
 
