@@ -178,9 +178,9 @@ repeat {
 for (index, product) in cart.enumerated() {
     if product.price < 5000.0 && product.socet == "s1151" {
         print("------------------- \(index + 1) ------------------")
-        print("Product name: \(product.productName), price: \(product.price)")
+        print("Product name: \(product.productName), price: \(product.price) \(product.currency)")
         print("Socet: \(product.socet)")
-    } 
+    }
 }
 
 
@@ -229,6 +229,18 @@ for (index, product) in cart.enumerated() {
     
  */
 
+for (index, product) in cart.enumerated() {
+    switch product.processor {
+    case "Intel":
+        print("------------------- \(index + 1) -------------------")
+        print("Product name: \(product.productName), price: \(product.price) \(product.currency)")
+    case "AMD":
+        print("------------------- \(index + 1) -------------------")
+        print("Product name: \(product.productName), price: \(product.price) \(product.currency)")
+    default :
+        print()
+    }
+}
 
 
 /*
