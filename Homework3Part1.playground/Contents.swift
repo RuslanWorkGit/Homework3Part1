@@ -80,7 +80,13 @@ for (index, product) in cart.enumerated() {
     ------------------------------------------------------
  */
 
-
+var index = 1
+for product in cart {
+    print("------------------- \(index) -------------------")
+    print("Product name: \(product.productName)")
+    print("Processor: \(product.processor)")
+    index += 1
+}
 
 
 
