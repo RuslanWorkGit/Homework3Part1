@@ -341,10 +341,12 @@ print("")
 print("")
 //@MainActor - спочатку без цього не працювало
 func printPriceProduct(maxPrice: Double) {
-    for (index, product) in cart.enumerated() {
+    var count = 1
+    for product in cart {
         if product.price < maxPrice {
             print(" ------------------- Products priced less than \(maxPrice) -------------------")
-            print("\(index + 1) Product name: \(product.productName), price: \(product.price) \(product.currency)")
+            print("\(count) Product name: \(product.productName), price: \(product.price) \(product.currency)")
+            count += 1
         }
     }
 }
@@ -375,8 +377,27 @@ printPriceProduct(maxPrice: 4500.0)
  
  */
 
+print("")
+print("")
+func theMostExpensiveProductByProcessor(processor: String) -> ProductInfo {
+    var productMaxPrice: ProductInfo? = nil
+    var maxPrice: Double = 0
 
+    for product in cart {
+        if product.processor == processor {
+            if product.price > maxPrice {
+                maxPrice = product.price
+                productMaxPrice = product
+            }
+        }
+    }
+    
+    return productMaxPrice!
+}
 
+let maxPriceIntel = theMostExpensiveProductByProcessor(processor: "Intel")
+print("------------------- The most expensive product with processor \(maxPriceIntel.processor) -------------------")
+print("Product name: \(maxPriceIntel.productName), price: \(maxPriceIntel.price)")
 
 
 /*
