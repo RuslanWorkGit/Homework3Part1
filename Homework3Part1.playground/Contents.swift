@@ -55,6 +55,8 @@ let cart: [ProductInfo] = [
     ------------------------------------------------------
  */
 
+print("")
+print("")
 for (index, product) in cart.enumerated() {
     print("--------------------------\(index + 1)--------------------------")
     print("Product name: \(product.productName), Price: \(product.price) \(product.currency)")
@@ -80,7 +82,8 @@ for (index, product) in cart.enumerated() {
     ------------------------------------------------------
  */
 
-
+print("")
+print("")
 var index = 1
 for product in cart {
     print("------------------- \(index) -------------------")
@@ -108,6 +111,8 @@ for product in cart {
     ------------------------------------------------------
  */
 
+print("")
+print("")
 var indexPart3 = 0
 while indexPart3 < cart.count {
     print("------------------- \(indexPart3 + 1) -------------------")
@@ -135,6 +140,8 @@ while indexPart3 < cart.count {
     ------------------------------------------------------
  */
 
+print("")
+print("")
 var indexPart4 = 0
 repeat {
     print("------------------- \(indexPart4 + 1) -------------------")
@@ -175,6 +182,8 @@ repeat {
     ------------------------------------------------------
  */
 
+print("")
+print("")
 for (index, product) in cart.enumerated() {
     if product.price < 5000.0 && product.socet == "s1151" {
         print("------------------- \(index + 1) ------------------")
@@ -229,6 +238,8 @@ for (index, product) in cart.enumerated() {
     
  */
 
+print("")
+print("")
 for (index, product) in cart.enumerated() {
     switch product.processor {
     case "Intel":
@@ -279,6 +290,8 @@ for (index, product) in cart.enumerated() {
  
  */
 
+print("")
+print("")
 func printIntelProducts() {
     var count = 1
     for product in cart {
@@ -324,8 +337,19 @@ printIntelProducts()
  
  */
 
+print("")
+print("")
+//@MainActor - спочатку без цього не працювало
+func printPriceProduct(maxPrice: Double) {
+    for (index, product) in cart.enumerated() {
+        if product.price < maxPrice {
+            print(" ------------------- Products priced less than \(maxPrice) -------------------")
+            print("\(index + 1) Product name: \(product.productName), price: \(product.price) \(product.currency)")
+        }
+    }
+}
 
-
+printPriceProduct(maxPrice: 4500.0)
 
 
 
