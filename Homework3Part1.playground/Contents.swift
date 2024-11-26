@@ -279,6 +279,19 @@ for (index, product) in cart.enumerated() {
  
  */
 
+func printIntelProducts() {
+    var count = 1
+    for product in cart {
+        
+        if product.processor == "Intel" {
+            print("------------------- Intel -------------------")
+            print("\(count) Product name: \(product.productName)")
+            count += 1
+        }
+    }
+}
+
+printIntelProducts()
 
 
 
