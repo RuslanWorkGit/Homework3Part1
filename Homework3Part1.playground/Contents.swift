@@ -472,10 +472,20 @@ print("USA have \(usaCurrency.rawValue) currency")
  
  */
 
+struct MotherBoard {
+    var socet: String
+    var procesor: ProcessorType
+}
 
+var myMotherBoard = MotherBoard(socet: "s12n5", procesor: .amd)
+myMotherBoard.procesor = .intel
+print("My mother board has \(myMotherBoard.socet) socet and \(myMotherBoard.procesor.rawValue) processor")
 
-
-
+var friendMotherBoard: MotherBoard
+friendMotherBoard = myMotherBoard
+friendMotherBoard.socet = "s12n6"
+print("My friend's mother board has \(friendMotherBoard.socet) socet and \(friendMotherBoard.procesor.rawValue) processor")
+print("My mother board has \(myMotherBoard.socet) socet and \(myMotherBoard.procesor.rawValue) processor")
 
 /*
  
