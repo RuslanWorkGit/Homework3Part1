@@ -502,7 +502,25 @@ print("My mother board has \(myMotherBoard.socet) socet and \(myMotherBoard.proc
  
  */
 
+print("\n")
+class Product {
+    var name: String = ""
+    var price: Double = 0.0
+    var currency: Currency = .uah
+    var motherBoard: MotherBoard = .init(socet: "", procesor: .intel)
+}
 
+let firstProduct = Product()
+firstProduct.name = "MacBook"
+firstProduct.price = 39999.0
+firstProduct.currency = .uah
+firstProduct.motherBoard = .init(socet: "234s12n1", procesor: .intel)
 
+print("Product name is \(firstProduct.name), price is \(firstProduct.price), currency is \(firstProduct.currency.rawValue), mother board is: socet - \(firstProduct.motherBoard.socet), processor - \(firstProduct.motherBoard.procesor.rawValue)")
 
-
+let secondProduct = firstProduct
+secondProduct.name = "windods laptop"
+secondProduct.price = 34444.0
+secondProduct.motherBoard.socet = "n34j11"
+print("Product name is \(secondProduct.name), price is \(secondProduct.price), currency is \(secondProduct.currency.rawValue), mother board is: socet - \(secondProduct.motherBoard.socet), processor - \(secondProduct.motherBoard.procesor.rawValue)")
+print("Product name is \(firstProduct.name), price is \(firstProduct.price), currency is \(firstProduct.currency.rawValue), mother board is: socet - \(firstProduct.motherBoard.socet), processor - \(firstProduct.motherBoard.procesor.rawValue)")
