@@ -418,9 +418,14 @@ print("Product name: \(maxPriceIntel.productName), price: \(maxPriceIntel.price)
  
  */
 
+print("\n")
+enum ProcessorType: String {
+    case intel = "Intel"
+    case amd = "AMD"
+}
 
-
-
+let myProcessor: ProcessorType = .intel
+print(myProcessor.rawValue)
 
 
 /*
