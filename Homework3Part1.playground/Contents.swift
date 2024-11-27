@@ -441,9 +441,17 @@ print(myProcessor.rawValue)
  
  */
 
+print("\n")
+enum Currency: String {
+    case uah = "UAH"
+    case usd = "USD"
+    case eur = "EUR"
+}
 
-
-
+let ukrainianCurrency: Currency = .uah
+let usaCurrency: Currency = .usd
+print("Ukraine have \(ukrainianCurrency.rawValue) currency")
+print("USA have \(usaCurrency.rawValue) currency")
 
 /*
  
